@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Manrope', sans-serif;
+  font-family: "Lexend Deca", sans-serif;
 }
 
 body {
@@ -11,143 +13,121 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #9eafc2;
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
 section {
-  height: 300px;
-  width: 700px;
-  background-color: #ecf2f8;
-  display: grid;
-  grid-template-columns: 40% 60%;
+  height: 500px;
+  width: 900px;
+  display: flex;
   border-radius: 10px;
 }
 
-section #big-pic {
-  background-image: url(../../images/drawers.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+section nav {
+  height: 100%;
+  width: 300px;
+}
+
+section nav h1 {
+  color: #f2f2f2;
+}
+
+section nav p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+section nav:nth-child(1) {
+  background-color: #e38826;
   border-radius: 10px 0px 0px 10px;
 }
 
+section nav:nth-child(1) .content .btn {
+  color: #e38826;
+}
+
+section nav:nth-child(1) .content .btn:hover {
+  color: rgba(255, 255, 255, 0.75);
+  border-color: #f2f2f2;
+  background-color: #e38826;
+}
+
+section nav:nth-child(2) {
+  background-color: #006970;
+}
+
+section nav:nth-child(2) .content .btn {
+  color: #006970;
+}
+
+section nav:nth-child(2) .content .btn:hover {
+  color: rgba(255, 255, 255, 0.75);
+  border-color: #f2f2f2;
+  background-color: #006970;
+}
+
+section nav:nth-child(3) {
+  background-color: #004241;
+  border-radius: 0px 10px 10px 0px;
+}
+
+section nav:nth-child(3) .content .btn {
+  color: #004241;
+}
+
+section nav:nth-child(3) .content .btn:hover {
+  background-color: #004241;
+  color: rgba(255, 255, 255, 0.75);
+  border-color: #f2f2f2;
+}
+
 section .content {
-  padding: 30px;
-}
-
-section .content h1 {
-  font-size: 20px;
-}
-
-section .content p {
-  margin-top: 10px;
-  color: #6d7f97;
-}
-
-section .content .profil {
-  display: grid;
-  grid-template-columns: 20% 60% 20%;
-  margin-top: 10px;
-}
-
-section .content .profil .pic {
-  height: 50px;
-  width: 50px;
-  border-radius: 50px;
-  background-image: url(../../images/avatar-michelle.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-section .content .profil div:nth-child(2) h1, section .content .profil div:nth-child(2) p {
-  font-size: 13px;
-}
-
-section .content .profil .share {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #9eafc2;
-  border-radius: 50px;
-  height: 40px;
-  width: 40px;
-}
-
-section .content .profil .share .social {
-  position: absolute;
-  height: 50px;
-  width: 200px;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  background-color: #6d7f97;
-  transform: translateY(-60px);
-}
-
-section .content .profil .share .social #btn {
-  height: 20px;
-  width: 20px;
-  position: absolute;
-  background-color: #6d7f97;
-  transform: translateY(25px) rotate(45deg);
-}
-
-section .content .profil .share .social div:nth-child(2) {
   height: 100%;
-  width: 100%;
+  margin: 50px;
+}
+
+section .content div:nth-child(1), section .content h1, section .content p {
+  margin-bottom: 30px;
+}
+
+section .content .btn {
+  margin-top: 90px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  border-radius: 10px;
+  height: 50px;
+  width: 150px;
+  border-radius: 50px;
+  border-style: solid;
+  border-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
-section .content .profil .share .social div:nth-child(2) h1 {
-  color: #48556a;
-}
-
-section .content .profil .share:hover .social {
-  display: flex;
+section .content .btn:hover {
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 450px) {
   body {
     height: 100%;
-    width: 100%;
   }
   section {
-    margin: 50px;
-    height: 600px;
+    margin-top: 50px;
+    height: 1500px;
     width: 300px;
-    grid-template-rows: 40% 60%;
-    grid-template-columns: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: red;
   }
-  section #big-pic {
+  section nav {
+    height: 500px;
+    width: 100%;
+  }
+  section nav:nth-child(1) {
     border-radius: 10px 10px 0px 0px;
   }
-  section .content {
-    padding: 30px 30px 0px 30px;
-    display: grid;
-  }
-  section .content h1 {
-    font-size: 15px;
-  }
-  section .content .profil .pic {
-    height: 40px;
-    width: 40px;
-  }
-  section .content .profil .share {
-    height: 30px;
-    width: 30px;
-  }
-  section .content .profil .share:hover .social {
-    height: 75px;
-    width: 301px;
-    transform: translateY(16px) translateX(-87px);
+  section nav:nth-child(3) {
     border-radius: 0px 0px 10px 10px;
-  }
-  section .content .profil .share:hover #btn {
-    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

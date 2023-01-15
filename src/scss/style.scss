@@ -1,164 +1,162 @@
 @import "./variable";
 
+//primary
+
+$Bright-orange: hsl(31, 77%, 52%);
+$Dark-cyan: hsl(184, 100%, 22%);
+$Very-dark-cyan: hsl(179, 100%, 13%);
+
+//neutral 
+
+$Transparent-white: hsla(0, 0%, 100%, 0.75); //(paragraphs)
+$Very-light-gray: hsl(0, 0%, 95%);  //(background, headings, buttons)
+
+//body copy
+
+$font-size: 15px;
+
+//font 
+ 
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+$font: 'Lexend Deca', sans-serif;
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Manrope', sans-serif;
+    font-family: $font;
 }
 
 body {
     height: 100vh;
     width: 100%;
-    @include center;
-    background-color: $Grayish-Blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $Transparent-white;
 }
 
 section {
-    height: 300px;
-    width: 700px;
-    background-color: $Light-Grayish-Blue;
-    display: grid;
-    grid-template-columns: 40% 60%;
+    height: 500px;
+    width: 900px;
+    display: flex;
     border-radius: 10px;
 
-    #big-pic {
-        background-image: url(../../images/drawers.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 10px 0px 0px 10px;
-    }
+    nav {
+        height: 100%;
+        width: (900px / 3);
 
-    .content {
-        padding: 30px;
-        
         h1 {
-            font-size: 20px;
+            color: $Very-light-gray;
         }
 
         p {
-            margin-top: 10px;
-            color: $Desaturated-Dark-Blue;
+            color: $Transparent-white;
         }
+    }
 
-        .profil {
-            display: grid;
-            grid-template-columns: 20% 60% 20%;
-            margin-top: 10px;
-            .pic {
-                height: 50px;
-                width: 50px;
-                border-radius: 50px;
-                background-image: url(../../images/avatar-michelle.jpg);
-                background-repeat: no-repeat;
-                background-size: contain;
-            }
+    nav:nth-child(1) {
+        background-color: $Bright-orange;
+        border-radius: 10px 0px 0px 10px;
 
-            div:nth-child(2) {
-                h1, p {
-                    font-size: $font-size;
-                }
-            }
+        .content .btn {
+            color: $Bright-orange;
 
-            .share {
-                @include center;
-                background-color: $Grayish-Blue;
-                border-radius: 50px;
-                height: 40px;
-                width: 40px;
-
-                .social {
-                    position: absolute;
-                    height: 50px;
-                    width: 200px;
-                    display: none;
-                    justify-content: center;
-                    align-items: center;
-                    border-radius: 10px;
-                    background-color: $Desaturated-Dark-Blue;
-                    transform: translateY(-60px);
-                    
-                    #btn {
-                        height: 20px;
-                        width: 20px;
-                        position: absolute;
-                        background-color: $Desaturated-Dark-Blue;
-                        transform: translateY(25px) rotate(45deg);
-                    }
-
-                    div:nth-child(2) {
-
-                        h1 {
-                            color: $Very-Dark-Grayish-Blue;
-                        }
-                        height: 100%;
-                        width: 100%;
-                        display: flex;
-                        justify-content: space-around;
-                        align-items: center;
-                        border-radius: 10px;
-                    }
-                }
-
-                &:hover {
-                    .social {
-                        display: flex;
-                    }
-                }
+            &:hover {
+                color: $Transparent-white;
+                border-color: $Very-light-gray;
+                background-color: $Bright-orange;
             }
         }
     }
+
+    nav:nth-child(2) {
+        background-color: $Dark-cyan;
+
+        .content .btn {
+            color: $Dark-cyan;
+
+            &:hover {
+                color: $Transparent-white;
+                border-color: $Very-light-gray;
+                background-color: $Dark-cyan;
+            }
+        }
+    }
+
+    nav:nth-child(3) {
+        background-color: $Very-dark-cyan;
+        border-radius: 0px 10px 10px 0px;
+
+        .content .btn {
+            color: $Very-dark-cyan;
+
+            &:hover {
+                background-color: $Very-dark-cyan;
+                color: $Transparent-white;
+                border-color: $Very-light-gray;
+            }
+        }
+    }
+
+    .content {
+        height: 100%;
+        margin: 50px;
+
+        div:nth-child(1), h1, p {
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            margin-top: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            width: 150px;
+            border-radius: 50px ;
+            border-style: solid;
+            border-color: $Very-light-gray;
+            background-color: $Very-light-gray;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }  
 }
 
 
-@media only screen and (max-width:450px) {
+@media only screen and (max-width: 450px) {
+
     body {
         height: 100%;
-        width: 100%;
     }
 
-    section {
-        margin: 50px;
-        height: 600px;
-        width: 300px;
-        grid-template-rows: 40% 60%;
-        grid-template-columns: 100%;
 
-        #big-pic {
+    section {
+        margin-top: 50px;
+        height: 1500px;
+        width: (900px / 3);
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        background-color: red;
+
+        nav {
+            height: (1500px / 3);
+            width: 100%;
+        }
+
+        nav:nth-child(1) {
             border-radius: 10px 10px 0px 0px;
         }
 
-        .content {
-            padding: 30px 30px 0px 30px;
-            display: grid;
-            h1 {
-                font-size: 15px;
-            }
-
-            .profil {
-                
-                .pic {
-                    height: 40px;
-                    width: 40px;
-                }
-
-                .share {
-                    height: 30px;
-                    width: 30px;
-
-                    &:hover {
-                        .social {
-                            height: 75px;
-                            width: 301px;
-                            transform: translateY(20px) translateX(-87px);
-                            border-radius: 0px 0px 10px 10px;
-                        }
-
-                        #btn {
-                            display: none;
-                        }
-                    }
-                }  
-            }
+        nav:nth-child(3) {
+            border-radius: 0px 0px 10px 10px;
         }
+
     }
+
 }
