@@ -2,128 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./src/images/favicon-32x32.png">
   <link rel="stylesheet" href="src/css/style.css">
-  <title>Frontend Mentor | [Challenge Name Here]</title>
-  <style>
+  <title>Frontend Mentor | Time tracking dashboard</title>
+  <!-- <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  </style> -->
 </head>
 <body>
-  <div class="header">
-    <div class="wrapper">
-      <div class="Daniel">
-        <div class="head">
-          <nav>
-            <img src="images/image-daniel.jpg" alt="#">
-          </nav>
-          <nav>
-            <h1>Daniel Clifford</h1>
-            <p>Verified Graduate</p>
-          </nav>
-        </div>
-        <h1 class="h1">
-          I received a job offer mid-course, and the subjects I learned were current, if not more so, 
-          in the company I joined. I honestly feel I got every penny’s worth.
-        </h1>
-        <p>
-          “ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a 
-          transition and have heard some people who had an amazing experience here. I signed up 
-          for the free intro course and found it incredibly fun! I enrolled shortly thereafter. 
-          The next 12 weeks was the best - and most grueling - time of my life. Since completing 
-          the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”
-        </p>
-      </div>
-      <div class="Jonathan">
-        <div class="head">
-          <nav>
-            <img src="images/image-jonathan.jpg" alt="#">
-          </nav>
-          <nav>
-            <h1>Jonathan Walters</h1>
-            <p>Verified Graduate</p>
-          </nav>
-        </div>
-        <h1 class="h1">
-          The team was very supportive and kept me motivated
-        </h1>
-        <p>
-          “ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer 
-          for a big company. This was one of the best investments I’ve made in myself. ”
-        </p>
-      </div>
-      <div id="Kira">
-        <div class="head">
-          <nav>
-            <img src="images/image-kira.jpg" alt="#">
-          </nav>
-          <nav>
-            <h1>Kira Whittle</h1>
-            <p>Verified Graduate</p>
-          </nav>
-        </div>
-        <h1 class="h1">
-          Such a life-changing experience. Highly recommended!
-        </h1>
-        <p>
-          “ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from 
-          professionals who can help me learn programming step by step. I was encouraged to enroll by a former 
-          student of theirs who can only say wonderful things about the program. The entire curriculum and staff 
-          did not disappoint. They were very hands-on and I never had to wait long for assistance. The agile team 
-          project, in particular, was outstanding. It took my learning to the next level in a way that no tutorial 
-          could ever have. In fact, I’ve often referred to it during interviews as an example of my developent 
-          experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers. 
-          100% recommend! ”
-        </p>
-      </div>
-      <div class="Jeanette">
-        <div class="head">
-          <nav>
-            <img src="images/image-jeanette.jpg" alt="#">
-          </nav>
-          <nav>
-            <h1>Jeanette Harmon</h1>
-            <p>Verified Graduate</p>
-          </nav>
-        </div>
-        <h1 class="h1">
-          An overall wonderful and rewarding experience
-        </h1>
-        <p>
-          “ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living 
-          while doing something I love. ”
-        </p>
-      </div>
-      <div class="Patrick">
-        <div class="head">
-          <nav>
-            <img src="images/image-patrick.jpg" alt="#">
-          </nav>
-          <nav>
-            <h1>Patrick Abrams</h1>
-            <p>Verified Graduate</p>
-          </nav>
-        </div>
-        <h1 class="h1">
-          Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and 
-          learning from their experiences was easy.
-        </h1>
-        <p>
-          “ The staff seem genuinely concerned about my progress which I find really refreshing. The program 
-          gave me the confidence necessary to be able to go out in the world and present myself as a capable 
-          junior developer. The standard is above the rest. You will get the personal attention you need from 
-          an incredible community of smart and amazing people. ”
-        </p>
-      </div>
+<header>
+  <section>
+    <div>
+      <nav>
+        <img src="src/images/image-jeremy.png" alt="#">
+      </nav>
+      <nav>
+        <p>Report for</p>
+        <h1>Jeremy <br> Robson</h1>
+      </nav>
     </div>
+    <div>
+      <button id="daily-btn">Daily</button>
+      <button id="weekly-btn">Weekly</button>
+      <button id="monthly-btn">Monthly</button>
+    </div>
+  </section>
+
+
+<section class="card">
+  <div class="icon _1"></div>
+  <div>
+    <div><h1>Work</h1> <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg></div>
+    <h1><span id="cureentwork">32</span>hrs</h1>
+    <p>Last Week - <span id="previouswork">36</span>hrs</p>
+  </div>
+</section>
+
+<section class="card">
+  <div class="icon _2"></div>
+  <div>
+    <div><h1>Play</h1> <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg></div>
+    <h1><span id="cureentPlay">10</span>hrs</h1>
+    <p>Last Week - <span id="previousPlay">8</span>hrs</p>
+  </div>
+</section>
+
+<section class="card">
+  <div class="icon _3"></div>
+  <div>
+    <div><h1>Study</h1> <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg></div>
+    <h1><span id="cureent-Study">4</span>hrs</h1>
+    <p>Last Week - <span id="previous-Study">7</span>hrs</p>
+  </div>
+</section>
+
+<section class="card">
+  <div class="icon _4"></div>
+  <div>
+    <div><h1>Exercise</h1> <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg></div>
+    <h1><span id="cureentExercise">4</span>hrs</h1>
+    <p>Last Week - <span id="previousExercise">5</span>hrs</p>
+  </div>
+</section>
+
+<section class="card">
+  <div class="icon _5"></div>
+  <div>
+    <div><h1>Social</h1> <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg></div>
+    <h1><span id="cureentSocial">5</span>hrs</h1>
+    <p>Last Week - <span id="previousSocial">10</span>hrs</p>
+  </div>
+</section>
+
+<section class="card">
+  <div class="icon _6"></div>
+  <div>
+    <div><h1>Self Care</h1> <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg></div>
+    <h1><span id="cureentSelf">2</span>hrs</h1>
+    <p>Last Week - <span id="previousself">2</span>hrs</p>
   </div>
 
-  <div class="attribution">
+</header>
+
+
+
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/MouaadLaouar">Laouar Mohamed Mouaad</a>.
-  </div>
+    Coded by <a href="https://github.com/MouaadLaouar">Laouar Mouaad</a>.
+  </div> -->
+  <script src="src/js/script.js"></script>
 </body>
 </html>
